@@ -1,0 +1,12 @@
+name: FirstWorkflow
+on: workflow_dispatch
+jobs:
+  first-jpb:
+   runs-on: ubuntu-latest
+   steps:
+    - name: Print greatinng
+      run: echo "hello world!"
+    - name: Print goodbye
+      run: echo "done-bye!"
+
+      
