@@ -9,6 +9,7 @@ jobs:
       - name: Run tests
         run: echo "Running tests..."
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Get code
@@ -16,6 +17,7 @@ jobs:
       - name: Deploy code
         run: echo "Deploying code..."
   validate:
+    needs: deploy
     runs-on: ubuntu-latest
     steps:
       - name: Get code
